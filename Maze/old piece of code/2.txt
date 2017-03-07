@@ -1,0 +1,51 @@
+public void prioridad(int i, int j) {
+        if (i > w) {
+            a = -1;
+            norte = true;
+            oeste = false;
+            este = false;
+            sur = false;
+        } else if (j < z) {
+            b1 = 1;
+            norte = false;
+            este = true;
+            sur = false;
+            oeste = false;
+        } else if (j > z) {
+            b1 = -1;
+            norte = false;
+            este = false;
+            sur = false;
+            oeste = true;
+        } else if (i < w) {
+            a = 1;
+            norte = false;
+            este = false;
+            sur = true;
+            oeste = false;
+        } else if (i <= w) {
+            a = -1;
+            norte = true;
+            este = false;
+            sur = false;
+            oeste = false;
+        } else if (j >= z) {
+            b1 = 1;
+            norte = false;
+            este = true;
+            sur = false;
+            oeste = false;
+        } else if (j <= z) {
+            b1 = -1;
+            norte = false;
+            este = false;
+            sur = false;
+            oeste = true;
+        } else if (i >= w) {
+            a = 1;
+            norte = false;
+            este = false;
+            sur = true;
+            oeste = false;
+        }
+    }

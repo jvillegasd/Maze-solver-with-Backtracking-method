@@ -1,0 +1,49 @@
+iniciarbt.setEnabled(false);
+        int i = y, j = x;
+        do {
+            try {
+                prioridad(i, j);
+                System.out.println(i + "|" + j + "|" + w + "|" + z);
+                if ((i + a) < 0 || (i + a > 12)) {
+
+                } else if ((!prueba[i + (a)][j].equals(".") && !prueba[i + (a)][j].equals("z")) && norte == true && !prueba[i + (a)][j].equals("a")) {
+                    i = i + (a);
+                    prueba[i][j] = "a";
+                    caminoY[contvecY] = i;
+                    caminoX[contvecX] = j;
+                    contvecY++;
+                } else if ((j + b1) < 0 || (j + b1 > 12)) {
+
+                } else if ((!prueba[i][j + (b1)].equals(".") && !prueba[i][j + (b1)].equals("z")) && este == true && !prueba[i][j + (b1)].equals("a")) {
+                    j = j + (b1);
+                    prueba[i][j] = "a";
+                    caminoY[contvecY] = i;
+                    caminoX[contvecX] = j;
+                    contvecX++;
+                } else if ((j + b1) < 0 || (j + b1 > 12)) {
+
+                } else if ((!prueba[i][j + (b1)].equals(".") && !prueba[i][j + (b1)].equals("z")) && oeste == true && !prueba[i][j + (b1)].equals("a")) {
+                    j = j + (b1);
+                    prueba[i][j] = "a";
+                    caminoY[contvecY] = i;
+                    caminoX[contvecX] = j;
+                    contvecX++;
+                } else if ((i + a) < 0 || (i + a > 12)) {
+
+                } else if ((!prueba[i + (a)][j].equals(".") && !prueba[i + (a)][j].equals("z")) && sur == true && !prueba[i + (a)][j].equals("z")) {
+                    i = i + (a);
+                    prueba[i][j] = "a";
+                    caminoY[contvecY] = i;
+                    caminoX[contvecX] = j;
+                    contvecY++;
+                }
+
+            } catch (java.lang.ArrayIndexOutOfBoundsException ev) {
+                JOptionPane.showMessageDialog(null, "No se pudo obtener una solucion");
+                i = w;
+                j = z;
+            }
+        } while (i != w || j != z);
+        mapajt.updateUI();
+        mapajt.setVisible(true);
+        prueba[i][j] = "X";
